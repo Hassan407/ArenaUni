@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="tab.png" type="image/x-icon">
+
+
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin-left: 750px;
+        }
+        
+        form {
+            width: 500px;
+            max-width: 800px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            align-self: center;
+            margin-bottom: 50px;
+        }
+        label, input, select {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #747474;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .m{
+            margin-right: 40px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            display: inline-block;
+            vertical-align: middle;
+            align-items: center;
+            
+        }
+
+        .m input[type="radio"] {
+            vertical-align: middle;}
+
+        h1 {font-size:45px;
+        font-family:'Times New Roman', Times, serif;}
+        
+
+        .delete{
+            width: 500px;
+            padding: 20px;
+            padding-bottom: 80px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .delete input{
+            width: 480px;
+        }
+
+        
+    </style>
+    <title>Update your Data</title>
+
+</head>
+
+
+
+
+
+
+<form action="Update.php" method="post">
+
+    <h1>Update Your Data</h1>
+
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="Phonenumber">Phone number:</label>
+    <input type="number" id="Phonenumber" name="Phonenumber" required>
+
+
+    <label for="governmentID">Government ID    <em style="font-size: small; color: #e40000;">!msut not be changed</em></label>
+    <input type="number" id="governmentID" name="governmentID" required>
+
+    <label for="BirthDate">Birth Date:</label>
+    <input type="date" id="BirthDate" name="BirthDate" required>
+
+
+    
+    <p class="m">Gender:</p>
+    <label class="m">
+        <input name="choice" type="radio"  value="male">
+        Male
+    </label>
+
+    <label class="m">
+        <input name="choice" type="radio"  value="female">
+        Female
+    </label>
+
+    <label for="department">Department:</label>
+    <select id="department" name="department" required>
+        <option value="engineering">Engineering</option>
+        <option value="Technology">Technology</option>
+        <option value="science">Science</option>
+        <option value="Medicine">Medicine</option>
+        <option value="Sports">Sports</option>
+        <option value="Law">Law</option>
+        <option value="business">Business</option>
+        <option value="literature">literature</option>
+        <option value="Art">Art</option>
+        <!-- Add more options as needed -->
+    </select>
+
+    <button type="submit" >Update</button>
+</form>
+
+
+<div class="delete">
+<h1>Delete Your Data</h1>
+<form action="delete.php" method="post">
+    <label for="governmentID">Government ID: <em style="font-size: small; color: #e40000;">!msut not be changed</em></label>
+    <input type="text" id="governmentID" name="governmentID" required>
+
+    <button id="deleteButton">Delete</button>
+</form>
+</div>
+</body>
+</html>
